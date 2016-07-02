@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:background="@color/primary_dark"
     android:fitsSystemWindows="true"
-    tools:context="br.com.dudafmme.speech2text.MainActivity">
+    tools:context="br.com.dudafmme.speech2text.MainActivity"
+    android:id="@+id/rlMain">
 
     <include layout="@layout/toolbar" />
 
@@ -15,10 +16,29 @@
         android:layout_below="@+id/toolbar"
         android:background="@color/primary_light">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/micImageView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:id="@+id/speechTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+        </RelativeLayout>
+
+
         <ImageView
-            android:id="@+id/mic_imv"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:id="@+id/micImageView"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="87dp"
@@ -27,13 +47,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="44dp"
-            android:text="@string/tap_on_mic"
+            android:layout_marginBottom="52dp"
+            android:text="@string/tap"
             android:textColor="@android:color/white"
-            android:textSize="18dp"/>
-    </RelativeLayout>
+            android:textSize="18sp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
 
+    </RelativeLayout>
 
 </RelativeLayout>
