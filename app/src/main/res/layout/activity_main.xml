@@ -10,13 +10,20 @@
 
     <include layout="@layout/toolbar"/>
 
-    <ImageView
-        android:id="@+id/mic_imv"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="47dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/mic"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/primary_light">
+
+        <ImageView
+            android:id="@+id/mic_imv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="47dp"
+            android:src="@drawable/mic" />
+    </RelativeLayout>
 
 </RelativeLayout>

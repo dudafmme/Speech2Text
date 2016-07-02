@@ -1,22 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primary_dark"
     android:fitsSystemWindows="true"
-    android:background="@color/primary_light"
     tools:context="br.com.dudafmme.speech2text.MainActivity">
 
-    <include layout="@layout/toolbar"/>
+    <include layout="@layout/toolbar" />
 
-    <ImageView
-        android:id="@+id/mic_imv"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="47dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/mic"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/primary_light">
+
+        <ImageView
+            android:id="@+id/mic_imv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="87dp"
+            android:src="@drawable/mic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="44dp"
+            android:text="@string/tap_on_mic"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"/>
+    </RelativeLayout>
+
 
 </RelativeLayout>
